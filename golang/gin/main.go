@@ -14,5 +14,5 @@ func main() {
 		time.Sleep(time.Millisecond * 50)
 		c.String(200, strings.Repeat("s", 4096))
 	})
-	router.Run(":8888")
+	router.Run(":3002")
 }
