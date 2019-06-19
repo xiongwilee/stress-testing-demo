@@ -9,7 +9,7 @@ use App\Http\Controllers\LanguageController;
 
 Route::get('/', function () {
     usleep(50000);
-    return str_repeat('s', 4096);
+    return str_repeat('haha', 1024);
 });
 
 // Switch between the included languages

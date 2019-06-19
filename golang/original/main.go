@@ -1,18 +1,18 @@
 package main
 
 import (
+	"log"
+	"net/http"
 	"strings"
 	"time"
-
-	"github.com/gin-gonic/gin"
 )
 
+func myHandler(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(time.Millisecond * 50)
+	strings.Repeat("haha", 1024)
+}
+
 func main() {
-	gin.SetMode(gin.ReleaseMode)
-	router := gin.New()
-	router.GET("/", func(c *gin.Context) {
-		time.Sleep(time.Millisecond * 50)
-		c.String(200, strings.Repeat("s", 4096))
-	})
-	router.Run(":3001")
+	http.HandleFunc("/", myHandler)
+	log.Fatal(http.ListenAndServe(":3001", nil))
 }
