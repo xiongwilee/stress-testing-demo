@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"strings"
@@ -9,7 +10,7 @@ import (
 
 func myHandler(w http.ResponseWriter, r *http.Request) {
 	time.Sleep(time.Millisecond * 50)
-	strings.Repeat("haha", 1024)
+	fmt.Fprintf(w, strings.Repeat("haha", 1024))
 }
 
 func main() {
