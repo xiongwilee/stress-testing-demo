@@ -14,6 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        usleep(50000);
+        return str_repeat('haha', 1024);
     }
 }

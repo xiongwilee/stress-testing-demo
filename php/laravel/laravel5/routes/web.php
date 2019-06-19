@@ -7,11 +7,6 @@ use App\Http\Controllers\LanguageController;
  * Routes that are used between both frontend and backend.
  */
 
-Route::get('/', function () {
-    usleep(50000);
-    return str_repeat('haha', 1024);
-});
-
 // Switch between the included languages
 Route::get('lang/{lang}', [LanguageController::class, 'swap']);
 
