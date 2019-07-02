@@ -76,10 +76,10 @@ http.createServer(function (request, response) {
 
 ### 压测结论
 
-1、在高并发场景下，相比于PHP，Golang/Nodejs表现还是不错的
-2、gin框架的引入不会给性能带来明显影响
-3、Nginx做Golang的反向代理性能还是很不错的，甚至没有延迟
-4、同机房一定要用内网IP！要用内网IP！内网IP！
+1. 在高并发场景下，相比于PHP，Golang/Nodejs表现还是不错的
+2. gin框架的引入不会给性能带来明显影响
+3. Nginx做Golang的反向代理性能还是很不错的，甚至没有延迟
+4. 同机房一定要用内网IP！要用内网IP！内网IP！
 
 ### 同机房非统计器压测详情
 
